@@ -22,6 +22,21 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/course/detail',
+    component: () => import('@/views/course/module/detail/index'),
+    hidden: true
+  },
+  {
+    path: '/course/search',
+    component: () => import('@/views/search/index'),
+    hidden: true
+  },
+  {
+    path: '/person/personal',
+    component: () => import('@/views/person/module/personal/index'),
+    hidden: true
+  },
+  {
     path: '/admin/person',
     component: Layout,
     hidden: true,

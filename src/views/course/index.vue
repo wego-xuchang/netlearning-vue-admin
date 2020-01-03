@@ -33,27 +33,39 @@
           <el-table-column type="expand">
             <template slot-scope="props">
               <el-form label-position="left" inline class="demo-table-expand">
-                <el-form-item label="商品名称">
-                  <span>{{ props.row.name }}</span>
-                </el-form-item>
-                <el-form-item label="所属店铺">
-                  <span>{{ props.row.shop }}</span>
-                </el-form-item>
-                <el-form-item label="商品 ID">
-                  <span>{{ props.row.id }}</span>
-                </el-form-item>
-                <el-form-item label="店铺 ID">
-                  <span>{{ props.row.shopId }}</span>
-                </el-form-item>
-                <el-form-item label="商品分类">
-                  <span>{{ props.row.category }}</span>
-                </el-form-item>
-                <el-form-item label="店铺地址">
-                  <span>{{ props.row.address }}</span>
-                </el-form-item>
-                <el-form-item label="商品描述">
-                  <span>{{ props.row.desc }}</span>
-                </el-form-item>
+                <el-row type="flex" class="row-bg">
+                  <el-col span="6">
+                    <el-image
+                      style="width: 100px; height: 100px"
+                      :src="props.row.url"
+                      :preview-src-list="props.row.srcList">
+                    </el-image>
+                  </el-col>
+                  <el-col span="18">
+                    <el-form-item label="商品名称">
+                      <span>{{ props.row.name }}</span>
+                    </el-form-item>
+                    <el-form-item label="所属店铺">
+                      <span>{{ props.row.shop }}</span>
+                    </el-form-item>
+                    <el-form-item label="商品 ID">
+                      <span>{{ props.row.id }}</span>
+                    </el-form-item>
+                    <el-form-item label="店铺 ID">
+                      <span>{{ props.row.shopId }}</span>
+                    </el-form-item>
+                    <el-form-item label="商品分类">
+                      <span>{{ props.row.category }}</span>
+                    </el-form-item>
+                    <el-form-item label="店铺地址">
+                      <span>{{ props.row.address }}</span>
+                    </el-form-item>
+                    <el-form-item label="商品描述">
+                      <span>{{ props.row.desc }}</span>
+                    </el-form-item>
+                  </el-col>
+                </el-row>
+
               </el-form>
             </template>
           </el-table-column>
@@ -112,7 +124,12 @@
           desc: '荷兰优质淡奶，奶香浓而不腻',
           address: '上海市普陀区真北路',
           shop: '王小虎夫妻店',
-          shopId: '10333'
+          shopId: '10333',
+          url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
+          srcList: [
+            'https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg',
+            'https://fuss10.elemecdn.com/1/8e/aeffeb4de74e2fde4bd74fc7b4486jpeg.jpeg'
+          ]
         }]
       }
     },
