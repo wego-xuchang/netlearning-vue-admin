@@ -142,24 +142,20 @@
         activeIndex2: '1',
         navItem:[
           {
-            id:'',
-            name:'',
+            systemNavId:'',
             imgUrl:'http://134.175.30.90/group1/M00/00/00/rBAADV4JpOqACX1iAAII29NlvBA681_big.jpg'
           },
           {
-            id:'',
-            name:'',
+            systemNavId:'',
             imgUrl:'http://134.175.30.90/group1/M00/00/00/rBAADV4JpSCAdJ1lAAHrBFlP9N0917_big.jpg'
           },
           {
-            id:'',
-            name:'',
+            systemNavId:'',
             imgUrl:'http://134.175.30.90/group1/M00/00/00/rBAADV4JpQuASgcvAAK6A9GjnBM525_big.jpg'
           }
           ,
           {
-            id:'',
-            name:'',
+            systemNavId:'',
             imgUrl:'http://134.175.30.90/group1/M00/00/00/rBAADV4JpT-Afr2bAAHlpM2Vvt8342_big.jpg'
           }
         ],
@@ -215,15 +211,18 @@
             courseCategory:[
               {
                 categoryName:'基础课程',
-                categoryUrl:''
+                categoryUrl:'',
+                categoryId:''
               },
               {
                 categoryName:'就业课程',
-                categoryUrl:''
+                categoryUrl:'',
+                categoryId:''
               },
               {
                 categoryName:'高级课程',
-                categoryUrl:''
+                categoryUrl:'',
+                categoryId:''
               }
             ],
             courseItem:[

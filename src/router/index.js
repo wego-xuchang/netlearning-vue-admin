@@ -37,6 +37,16 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/person/favorite',
+    component: () => import('@/views/person/module/favorite/index'),
+    hidden: true
+  },
+  {
+    path: '/person/setting',
+    component: () => import('@/views/person/module/setting/index'),
+    hidden: true
+  },
+  {
     path: '/admin/person',
     component: Layout,
     hidden: true,

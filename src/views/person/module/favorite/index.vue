@@ -1,7 +1,62 @@
-@charset "UTF-8";
-/*
- * colors variables
- */
+<template>
+  <div>
+    <div class="personal-header" >
+    </div>
+    <div class="container">
+      <div class="personal-nav pull-left">
+        <div class="nav nav-stacked text-left">
+          <div class="title">个人中心</div>
+          <div class="my-ico">
+            <img :src="userDetail.userIcon" alt="">
+            <p>{{userDetail.userName}}</p>
+          </div>
+          <div class="item">
+            <li ><a href="" class="glyphicon glyphicon-tower"> 我的课程<i class="pull-right">></i></a></li>
+            <li class="active"><a href="" class="glyphicon glyphicon-heart"> 我的收藏<i class="pull-right">></i></a> </li>
+            <li><a href="" class="glyphicon glyphicon-cog"> 个人设置<i class="pull-right">></i></a></li>
+            <li><a href="" class="glyphicon glyphicon-log-out"> 退出<i class="pull-right">></i></a></li>
+          </div>
+        </div>
+      </div>
+      <div class="personal-content pull-right">
+        <div class="personal-cont">
+          <div class="top">
+            <div class="tit"><span>我的收藏</span></div>
+            <div class="top-cont">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</template>
+
+<script>
+  import { mapGetters } from 'vuex'
+
+  export default {
+    name: 'perosonalFavorite',
+    computed: {
+      ...mapGetters([
+        'name'
+      ])
+    },
+    data() {
+      return{
+        userDetail:{
+          userName:'许昌',
+          userIcon:'http://134.175.30.90/group1/M00/00/00/rBAADV4O-SGACQ5jAAAWhyNzIl8480_big.jpg'
+        }
+      }
+    }
+  }
+</script>
+
+<style lang="scss" scoped>
+@import "../../../../assets/css/normalize.css";
+@import "../../../../assets/bootstrap/dist/css/bootstrap.css";
 html, body {
   min-height: 100%;
   height: 100%;
@@ -89,7 +144,7 @@ em, i {
   display: inline-block;
   width: 13px;
   height: 10px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -83px 2px;
 }
 
@@ -97,7 +152,7 @@ em, i {
   display: inline-block;
   width: 13px;
   height: 10px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -83px -6px;
 }
 
@@ -105,7 +160,7 @@ em, i {
   display: inline-block;
   width: 20px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -104px 0px;
 }
 
@@ -113,7 +168,7 @@ em, i {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -57px 0px;
 }
 
@@ -121,7 +176,7 @@ em, i {
   display: inline-block;
   width: 18px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 0px 1px;
 }
 
@@ -129,7 +184,7 @@ em, i {
   display: inline-block;
   width: 18px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -26px 0px;
 }
 
@@ -137,7 +192,7 @@ em, i {
   display: inline-block;
   width: 16px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -133px 0px;
 }
 
@@ -145,7 +200,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 12px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 0px -20px;
 }
 
@@ -153,7 +208,7 @@ em, i {
   display: inline-block;
   width: 23px;
   height: 19px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -133px -21px;
 }
 
@@ -161,7 +216,7 @@ em, i {
   display: inline-block;
   width: 23px;
   height: 19px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -102px -21px;
 }
 
@@ -169,7 +224,7 @@ em, i {
   display: inline-block;
   width: 16px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -22px -19px;
 }
 
@@ -177,7 +232,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -43px -19px;
 }
 
@@ -185,7 +240,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -64px -19px;
 }
 
@@ -193,7 +248,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 1px -35px;
 }
 
@@ -201,7 +256,7 @@ em, i {
   display: inline-block;
   width: 14px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -22px -35px;
   margin-right: 8px;
 }
@@ -275,7 +330,7 @@ header .navbar .sign-in .personal span {
   position: relative;
   top: 6px;
   margin-left: 8px;
-  background: url(../img/asset-personalIco.png) no-repeat;
+  background: url(../../../../assets/img/asset-personalIco.png) no-repeat;
 }
 
 header .navbar .sign-in .myInfo {
@@ -346,6 +401,9 @@ header .search-buttom {
   border-radius: 0;
   position: relative;
   top: -1px;
+}
+.personal-page{
+  margin: 15px 0;
 }
 
 /*
@@ -468,7 +526,7 @@ em, i {
   display: inline-block;
   width: 13px;
   height: 10px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -83px 2px;
 }
 
@@ -476,7 +534,7 @@ em, i {
   display: inline-block;
   width: 13px;
   height: 10px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -83px -6px;
 }
 
@@ -484,7 +542,7 @@ em, i {
   display: inline-block;
   width: 20px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -104px 0px;
 }
 
@@ -492,7 +550,7 @@ em, i {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -57px 0px;
 }
 
@@ -500,7 +558,7 @@ em, i {
   display: inline-block;
   width: 18px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 0px 1px;
 }
 
@@ -508,7 +566,7 @@ em, i {
   display: inline-block;
   width: 18px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -26px 0px;
 }
 
@@ -516,7 +574,7 @@ em, i {
   display: inline-block;
   width: 16px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -133px 0px;
 }
 
@@ -524,7 +582,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 12px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 0px -20px;
 }
 
@@ -532,7 +590,7 @@ em, i {
   display: inline-block;
   width: 23px;
   height: 19px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -133px -21px;
 }
 
@@ -540,7 +598,7 @@ em, i {
   display: inline-block;
   width: 23px;
   height: 19px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -102px -21px;
 }
 
@@ -548,7 +606,7 @@ em, i {
   display: inline-block;
   width: 16px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -22px -19px;
 }
 
@@ -556,7 +614,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -43px -19px;
 }
 
@@ -564,7 +622,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -64px -19px;
 }
 
@@ -572,7 +630,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 1px -35px;
 }
 
@@ -580,13 +638,13 @@ em, i {
   display: inline-block;
   width: 14px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -22px -35px;
   margin-right: 8px;
 }
 
 .personal-header {
-  background: top center no-repeat #000000;
+  background: top center no-repeat #26abe7;
   background-size: cover;
   position: relative;
   top: -10px;
@@ -692,7 +750,7 @@ em, i {
   display: inline-block;
   width: 13px;
   height: 10px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -83px 2px;
 }
 
@@ -700,7 +758,7 @@ em, i {
   display: inline-block;
   width: 13px;
   height: 10px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -83px -6px;
 }
 
@@ -708,7 +766,7 @@ em, i {
   display: inline-block;
   width: 20px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -104px 0px;
 }
 
@@ -716,7 +774,7 @@ em, i {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -57px 0px;
 }
 
@@ -724,7 +782,7 @@ em, i {
   display: inline-block;
   width: 18px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 0px 1px;
 }
 
@@ -732,7 +790,7 @@ em, i {
   display: inline-block;
   width: 18px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -26px 0px;
 }
 
@@ -740,7 +798,7 @@ em, i {
   display: inline-block;
   width: 16px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -133px 0px;
 }
 
@@ -748,7 +806,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 12px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 0px -20px;
 }
 
@@ -756,7 +814,7 @@ em, i {
   display: inline-block;
   width: 23px;
   height: 19px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -133px -21px;
 }
 
@@ -764,7 +822,7 @@ em, i {
   display: inline-block;
   width: 23px;
   height: 19px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -102px -21px;
 }
 
@@ -772,7 +830,7 @@ em, i {
   display: inline-block;
   width: 16px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -22px -19px;
 }
 
@@ -780,7 +838,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -43px -19px;
 }
 
@@ -788,7 +846,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -64px -19px;
 }
 
@@ -796,7 +854,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 1px -35px;
 }
 
@@ -804,7 +862,7 @@ em, i {
   display: inline-block;
   width: 14px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -22px -35px;
   margin-right: 8px;
 }
@@ -971,7 +1029,7 @@ em, i {
   display: inline-block;
   width: 13px;
   height: 10px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -83px 2px;
 }
 
@@ -979,7 +1037,7 @@ em, i {
   display: inline-block;
   width: 13px;
   height: 10px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -83px -6px;
 }
 
@@ -987,7 +1045,7 @@ em, i {
   display: inline-block;
   width: 20px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -104px 0px;
 }
 
@@ -995,7 +1053,7 @@ em, i {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -57px 0px;
 }
 
@@ -1003,7 +1061,7 @@ em, i {
   display: inline-block;
   width: 18px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 0px 1px;
 }
 
@@ -1011,7 +1069,7 @@ em, i {
   display: inline-block;
   width: 18px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -26px 0px;
 }
 
@@ -1019,7 +1077,7 @@ em, i {
   display: inline-block;
   width: 16px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -133px 0px;
 }
 
@@ -1027,7 +1085,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 12px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 0px -20px;
 }
 
@@ -1035,7 +1093,7 @@ em, i {
   display: inline-block;
   width: 23px;
   height: 19px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -133px -21px;
 }
 
@@ -1043,7 +1101,7 @@ em, i {
   display: inline-block;
   width: 23px;
   height: 19px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -102px -21px;
 }
 
@@ -1051,7 +1109,7 @@ em, i {
   display: inline-block;
   width: 16px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -22px -19px;
 }
 
@@ -1059,7 +1117,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -43px -19px;
 }
 
@@ -1067,7 +1125,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -64px -19px;
 }
 
@@ -1075,7 +1133,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 1px -35px;
 }
 
@@ -1083,7 +1141,7 @@ em, i {
   display: inline-block;
   width: 14px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -22px -35px;
   margin-right: 8px;
 }
@@ -1103,7 +1161,7 @@ em, i {
 .personal-cont .top .top-cont {
   position: relative;
   padding: 15px 15px 15px 51px;
-  background: #cec1c1;
+  background: #fff;
 }
 
 .personal-cont .top .top-cont .imgIco {
@@ -1159,7 +1217,7 @@ em, i {
   top: 2px;
   width: 16px;
   height: 16px;
-  background: url(../img/asset-play.png) center center no-repeat;
+  /*background: url(../../../../assets/img/asset-play.png) center center no-repeat;*/
 }
 
 .personal-cont .top .top-cont .rate {
@@ -1361,7 +1419,7 @@ em, i {
   top: 2px;
   width: 16px;
   height: 16px;
-  background: url(../img/asset-play.png) center center no-repeat;
+  /*background: url(../../../../assets/img/asset-play.png) center center no-repeat;*/
 }
 
 .personal-cont .my-course .cont .item .time {
@@ -1422,7 +1480,7 @@ em, i {
   height: 19px;
   margin-top: 0px;
   display: inline-block;
-  background: url(../img/asset-star-show.png) no-repeat;
+  background: url(../../../../assets/img/asset-star-show.png) no-repeat;
   background-size: contain;
 }
 
@@ -1648,7 +1706,7 @@ em, i {
   display: inline-block;
   width: 13px;
   height: 10px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -83px 2px;
 }
 
@@ -1656,7 +1714,7 @@ em, i {
   display: inline-block;
   width: 13px;
   height: 10px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -83px -6px;
 }
 
@@ -1664,7 +1722,7 @@ em, i {
   display: inline-block;
   width: 20px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -104px 0px;
 }
 
@@ -1672,7 +1730,7 @@ em, i {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -57px 0px;
 }
 
@@ -1680,7 +1738,7 @@ em, i {
   display: inline-block;
   width: 18px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 0px 1px;
 }
 
@@ -1688,7 +1746,7 @@ em, i {
   display: inline-block;
   width: 18px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -26px 0px;
 }
 
@@ -1696,7 +1754,7 @@ em, i {
   display: inline-block;
   width: 16px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -133px 0px;
 }
 
@@ -1704,7 +1762,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 12px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 0px -20px;
 }
 
@@ -1712,7 +1770,7 @@ em, i {
   display: inline-block;
   width: 23px;
   height: 19px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -133px -21px;
 }
 
@@ -1720,7 +1778,7 @@ em, i {
   display: inline-block;
   width: 23px;
   height: 19px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -102px -21px;
 }
 
@@ -1728,7 +1786,7 @@ em, i {
   display: inline-block;
   width: 16px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -22px -19px;
 }
 
@@ -1736,7 +1794,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 14px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -43px -19px;
 }
 
@@ -1744,7 +1802,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -64px -19px;
 }
 
@@ -1752,7 +1810,7 @@ em, i {
   display: inline-block;
   width: 15px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: 1px -35px;
 }
 
@@ -1760,7 +1818,7 @@ em, i {
   display: inline-block;
   width: 14px;
   height: 13px;
-  background: url(../img/asset-icoGather.png) no-repeat;
+  background: url(../../../../assets/img/asset-icoGather.png) no-repeat;
   background-position: -22px -35px;
   margin-right: 8px;
 }
@@ -1775,3 +1833,4 @@ em, i {
 .personal-content {
   width: 930px;
 }
+</style>
